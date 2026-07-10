@@ -1,0 +1,40 @@
+# Orto Up Clínica Odontológica
+
+> Clínica odontológica em Afonso Pena, São José dos Pinhais - PR, fundada em 2009 pelo Dr. Marcelo Silva Araujo. Atendimento humanizado, tecnologia atualizada e aceitação de planos de saúde.
+
+## Dados de Contato
+
+- Endereço: Rua Almirante Alexandrino, 2300 - Afonso Pena, São José dos Pinhais - PR, 83045-210
+- Telefone / WhatsApp: (41) 99849-7676
+- E-mail: ortoup@ortoup.com.br
+- Horário de funcionamento: segunda a sexta-feira, das 9h às 19h
+- Instagram: https://instagram.com/ortoup_reabilitacao_oral
+- CNPJ: 11.213.984/0001-05
+- Responsável técnico: Dr. Marcelo Silva Araujo, CRO 20264 (Prótese e Implante) — CRO da clínica 1856
+- Avaliação: 5,0 de 5 estrelas no Google (41 avaliações)
+
+## Sobre
+
+Fundada em 2009, a Orto Up nasceu do sonho de oferecer uma odontologia diferenciada, baseada em excelência técnica e atendimento humanizado. Mais informações em /about.
+
+## Serviços
+
+- Implantes Dentários — tecnologia de implante sem corte, com cirurgia guiada por guia cirúrgico personalizado. /services/implantes-dentarios
+- Ortodontia — aparelhos variados, incluindo autoligado (sem borrachinhas). /services/ortodontia
+- Alinhadores Invisíveis — tratamento com Invisalign. /services/alinhadores-invisiveis
+- Clareamento Dental — clareamento personalizado para cada paciente. /services/clareamento-dental
+- Lentes de Contato Dental — em porcelana e resina. /services/lentes-de-contato-dental
+- Endodontia — tratamento de canal, muitas vezes em sessão única. /services/endodontia
+- Prótese Dentária — próteses fixas e removíveis. /services/protese-dentaria
+- Cirurgia Oral — extrações e procedimentos cirúrgicos. /services/cirurgia-oral
+- Clínica Geral — exames, limpezas e restaurações de rotina. /services/clinica-geral
+
+Lista completa com descrições em /services.
+
+## Páginas
+
+- Home: /
+- Sobre Nós: /about
+- Serviços: /services
+- Contato: /contact
+- Agendar Consulta: /booking

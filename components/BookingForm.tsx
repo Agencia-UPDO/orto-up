@@ -25,13 +25,13 @@ export default function BookingForm() {
 
     if (!formRef.current) {
       setStatus('error');
-      setErrorMessage('Form tidak tersedia. Coba refresh halaman.');
+      setErrorMessage('Formulário indisponível. Tente atualizar a página.');
       return;
     }
 
     if (!serviceId || !templateId || !publicKey) {
       const formData = new FormData(formRef.current);
-      const mailto = `mailto:contact@dentiacare.com?subject=Booking Appointment - ${formData.get('service')}&body=Name: ${formData.get('name')}%0D%0AEmail: ${formData.get('email')}%0D%0APhone: ${formData.get('phone')}%0D%0AService: ${formData.get('service')}%0D%0ADate: ${formData.get('date')}%0D%0ATime: ${formData.get('time')}%0D%0AMessage: ${formData.get('message')}`;
+      const mailto = `mailto:ortoup@ortoup.com.br?subject=Agendamento de Consulta - ${formData.get('service')}&body=Nome: ${formData.get('name')}%0D%0AE-mail: ${formData.get('email')}%0D%0ATelefone: ${formData.get('phone')}%0D%0AServiço: ${formData.get('service')}%0D%0AData: ${formData.get('date')}%0D%0AHorário: ${formData.get('time')}%0D%0AMensagem: ${formData.get('message')}`;
       window.location.href = mailto;
       setStatus('success');
       return;
@@ -43,7 +43,7 @@ export default function BookingForm() {
       formRef.current.reset();
     } catch {
       setStatus('error');
-      setErrorMessage('Gagal kirim booking. Coba lagi atau hubungi kami langsung.');
+      setErrorMessage('Falha ao enviar o agendamento. Tente novamente ou fale conosco diretamente.');
     }
   };
 
@@ -51,31 +51,34 @@ export default function BookingForm() {
     <div className="relative">
       {status === 'success' ? (
         <div id="success_message_col" className="success p-40 h-100" style={{ display: 'block' }}>
-          <h3>Thank You For Your Order</h3>
-          <p>We have received your request and will be processing it shortly. Click button below if you want to make another order.</p>
+          <h3>Obrigado pelo seu Agendamento</h3>
+          <p>Recebemos sua solicitação e em breve entraremos em contato. Clique no botão abaixo se quiser fazer outro agendamento.</p>
           <button
             type="button"
             className="btn-main"
             onClick={() => setStatus('idle')}
           >
-            Re-order
+            Novo Agendamento
           </button>
         </div>
       ) : (
         <form ref={formRef} name="bookingForm" id="booking_form" onSubmit={handleSubmit}>
           <div className="row g-4">
             <div className="col-lg-12">
-              <h3 className="mb-3"><i className="fa fa-envelope-o id-color me-2"></i> Book Your Appointment</h3>
-              <p>Book your appointment today for expert dental care tailored to your needs. Healthy, beautiful smiles start with a simple step, schedule now!</p>
+              <h3 className="mb-3"><i className="fa fa-envelope-o id-color me-2"></i> Agende sua Consulta</h3>
+              <p>Agende hoje mesmo sua consulta e receba um cuidado odontológico especializado feito sob medida para você. Um sorriso saudável e bonito começa com um passo simples, agende agora!</p>
               <div className="relative">
                 <select name="service" id="service" className="form-control" defaultValue="" required>
-                  <option disabled value="">Select Service</option>
-                  <option value="General Dentistry">General Dentistry</option>
-                  <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-                  <option value="Pediatric Dentistry">Pediatric Dentistry</option>
-                  <option value="Restorative Dentistry">Restorative Dentistry</option>
-                  <option value="Preventive Dentistry">Preventive Dentistry</option>
-                  <option value="Orthodontics">Orthodontics</option>
+                  <option disabled value="">Selecione o Serviço</option>
+                  <option value="Implantes Dentários">Implantes Dentários</option>
+                  <option value="Ortodontia">Ortodontia</option>
+                  <option value="Alinhadores Invisíveis">Alinhadores Invisíveis</option>
+                  <option value="Clareamento Dental">Clareamento Dental</option>
+                  <option value="Lentes de Contato Dental">Lentes de Contato Dental</option>
+                  <option value="Endodontia">Endodontia</option>
+                  <option value="Prótese Dentária">Prótese Dentária</option>
+                  <option value="Cirurgia Oral">Cirurgia Oral</option>
+                  <option value="Clínica Geral">Clínica Geral</option>
                 </select>
                 <i className="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
               </div>
@@ -92,7 +95,7 @@ export default function BookingForm() {
             <div className="col-lg-6">
               <div className="relative">
                 <select name="time" id="time" className="form-control" defaultValue="" required>
-                  <option disabled value="">Select Time</option>
+                  <option disabled value="">Selecione o Horário</option>
                   <option value="10:00">10:00</option>
                   <option value="11:00">11:00</option>
                   <option value="12:00">12:00</option>
@@ -110,19 +113,19 @@ export default function BookingForm() {
             </div>
 
             <div className="col-lg-4">
-              <input type="text" name="name" id="name" placeholder="Name" className="form-control" required />
+              <input type="text" name="name" id="name" placeholder="Nome" className="form-control" required />
             </div>
 
             <div className="col-lg-4">
-              <input type="email" name="email" id="email" placeholder="Email" className="form-control" required />
+              <input type="email" name="email" id="email" placeholder="E-mail" className="form-control" required />
             </div>
 
             <div className="col-lg-4">
-              <input type="text" name="phone" id="phone" placeholder="Phone" className="form-control" required />
+              <input type="text" name="phone" id="phone" placeholder="Telefone" className="form-control" required />
             </div>
 
             <div className="col-lg-12">
-              <textarea name="message" id="message" className="form-control" placeholder="Message"></textarea>
+              <textarea name="message" id="message" className="form-control" placeholder="Mensagem"></textarea>
             </div>
 
             <div className="col-lg-12">
@@ -130,7 +133,7 @@ export default function BookingForm() {
                 <input
                   type="submit"
                   id="send_message"
-                  value={status === 'sending' ? 'Sending...' : 'Send Appointment'}
+                  value={status === 'sending' ? 'Enviando...' : 'Enviar Agendamento'}
                   className="btn-main"
                   disabled={status === 'sending'}
                 />

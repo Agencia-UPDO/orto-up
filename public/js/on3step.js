@@ -1023,13 +1023,7 @@
 
          jQuery('#extra-content').addClass('wow');
 
-         jQuery("#btn-extra").on("click", function() {
-            jQuery('#extra-wrap').addClass('open');
-         });
-
-         jQuery("#btn-close").on("click", function() {
-            jQuery('#extra-wrap').removeClass('open');
-         });
+         /* #btn-extra / #btn-close handled in ScriptHandler.tsx (toggle + no-scroll lock together, avoids duplicate bindings) */
          
      }
 	 
@@ -1424,16 +1418,7 @@
          sequence();
          sequence_a();
 	
-		$('.accordion-section-title').on("click", function(e) {
-         var currentAttrvalue = $(this).data('tab');
-         if($(e.target).is('.active')){
-             $(this).removeClass('active');
-             $('.accordion-section-content:visible').slideUp(300);
-         } else {
-             $('.accordion-section-title').removeClass('active').filter(this).addClass('active');
-             $('.accordion-section-content').slideUp(300).filter(currentAttrvalue).slideDown(300);
-         }
-        });
+		/* accordion click handled in ScriptHandler.tsx (initAccordion) — kept out of here to avoid double-binding, which caused the FAQ to open then immediately close. */
 
         jQuery.each(jQuery('textarea[data-autoresize]'), function() {
             var offset = this.offsetHeight - this.clientHeight;

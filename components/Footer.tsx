@@ -6,42 +6,42 @@ export default function Footer() {
       <div className="container">
         <div className="row gx-5">
           <div className="col-lg-4 col-sm-6">
-            <img src="/images/logo-white.webp" className="logo-footer" alt="" />
+            <img src="/images/logo-orto-up-white.png" className="logo-footer" alt="Orto Up" />
             <div className="spacer-20"></div>
-            <p>At Dentia, we’re dedicated to providing high-quality, personalized dental care for patients of all ages. Our skilled team uses the latest technology to ensure comfortable, efficient treatments and beautiful, healthy smiles for life.</p>
+            <p>Desde 2009, a Orto Up une excelência técnica e atendimento humanizado para transformar sorrisos e devolver autoestima e qualidade de vida aos nossos pacientes.</p>
 
             <div className="social-icons mb-sm-30">
-              <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
-              <Link href="#"><i className="fa-brands fa-x-twitter"></i></Link>
-              <Link href="#"><i className="fa-brands fa-whatsapp"></i></Link>
-              <Link href="#"><i className="fa-brands fa-instagram"></i></Link>
-              <Link href="#"><i className="fa-brands fa-youtube"></i></Link>
+              <Link href="https://instagram.com/ortoup_reabilitacao_oral" target="_blank"><i className="fa-brands fa-instagram"></i></Link>
+              <Link href="https://wa.me/5541998497676" target="_blank"><i className="fa-brands fa-whatsapp"></i></Link>
             </div>
           </div>
           <div className="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
             <div className="row">
               <div className="col-lg-6 col-sm-6">
                 <div className="widget">
-                  <h5>Company</h5>
+                  <h5>Empresa</h5>
                   <ul>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/services">Our Services</Link></li>
-                    <li><Link href="/gallery">Gallery</Link></li>
-                    <li><Link href="/about">About Us</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
+                    <li><Link href="/">Início</Link></li>
+                    <li><Link href="/about">Sobre Nós</Link></li>
+                    <li><Link href="/services">Nossos Serviços</Link></li>
+                    <li><Link href="/contact">Contato</Link></li>
+                    <li><Link href="/booking">Agendar Consulta</Link></li>
                   </ul>
                 </div>
               </div>
               <div className="col-lg-6 col-sm-6">
                 <div className="widget">
-                  <h5>Our Services</h5>
+                  <h5>Nossos Serviços</h5>
                   <ul>
-                    <li><Link href="/services/general-dentistry">General Dentistry</Link></li>
-                    <li><Link href="/services/cosmetic-dentistry">Cosmetic Dentistry</Link></li>
-                    <li><Link href="/services/pediatric-dentistry">Pediatric Dentistry</Link></li>
-                    <li><Link href="/services/restorative-dentistry">Restorative Dentistry</Link></li>
-                    <li><Link href="/services/preventive-dentistry">Preventive Dentistry</Link></li>
-                    <li><Link href="/services/orthodontics">Orthodontics</Link></li>
+                    <li><Link href="/services/implantes-dentarios">Implantes Dentários</Link></li>
+                    <li><Link href="/services/ortodontia">Ortodontia</Link></li>
+                    <li><Link href="/services/alinhadores-invisiveis">Alinhadores Invisíveis</Link></li>
+                    <li><Link href="/services/clareamento-dental">Clareamento Dental</Link></li>
+                    <li><Link href="/services/lentes-de-contato-dental">Lentes de Contato Dental</Link></li>
+                    <li><Link href="/services/endodontia">Endodontia</Link></li>
+                    <li><Link href="/services/protese-dentaria">Prótese Dentária</Link></li>
+                    <li><Link href="/services/cirurgia-oral">Cirurgia Oral</Link></li>
+                    <li><Link href="/services/clinica-geral">Clínica Geral</Link></li>
                   </ul>
                 </div>
               </div>
@@ -49,19 +49,24 @@ export default function Footer() {
           </div>
           <div className="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
             <div className="widget">
-              <h5>Contact Us</h5>
-              <div className="fw-bold text-white"><i className="icofont-location-pin me-2 id-color"></i>Clinic Location</div>
-              100 S Main St, New York, NY
+              <h5>Fale Conosco</h5>
+              <div className="fw-bold text-white"><i className="icofont-location-pin me-2 id-color"></i>Localização</div>
+              Rua Almirante Alexandrino, 2300 - Afonso Pena, São José dos Pinhais - PR, 83045-210
 
               <div className="spacer-20"></div>
 
-              <div className="fw-bold text-white"><i className="icofont-phone me-2 id-color"></i>Call Us</div>
-              +1 123 456 789
+              <div className="fw-bold text-white"><i className="icofont-phone me-2 id-color"></i>Telefone / WhatsApp</div>
+              (41) 99849-7676
 
               <div className="spacer-20"></div>
 
-              <div className="fw-bold text-white"><i className="icofont-envelope me-2 id-color"></i>Send a Message</div>
-              contact@dentiacare.com
+              <div className="fw-bold text-white"><i className="icofont-envelope me-2 id-color"></i>Envie uma Mensagem</div>
+              ortoup@ortoup.com.br
+
+              <div className="spacer-20"></div>
+
+              <div className="fw-bold text-white"><i className="icofont-clock-time me-2 id-color"></i>Horário</div>
+              Segunda a Sexta, 09h às 19h
             </div>
           </div>
         </div>
@@ -72,11 +77,11 @@ export default function Footer() {
             <div className="col-md-12">
               <div className="de-flex">
                 <div className="de-flex-col">
-                  Copyright {new Date().getFullYear()} - Dentia by on3step
+                  Copyright {new Date().getFullYear()} - Orto Up Clínica Odontológica &middot; CNPJ 11.213.984/0001-05 &middot; CRO Clínica 1856
                 </div>
                 <ul className="menu-simple">
-                  <li><Link href="#">Terms &amp; Conditions</Link></li>
-                  <li><Link href="#">Privacy Policy</Link></li>
+                  <li><Link href="#">Termos &amp; Condições</Link></li>
+                  <li><Link href="#">Política de Privacidade</Link></li>
                 </ul>
               </div>
             </div>

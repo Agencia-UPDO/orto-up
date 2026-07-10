@@ -27,7 +27,7 @@ export default function ContactForm() {
         // Fallback for demo purposes if keys aren't set
         setTimeout(() => {
             const formData = new FormData(form.current!);
-            const mailtoLink = `mailto:contact@dentiacare.com?subject=New Contact from ${formData.get('name')}&body=${formData.get('message')}%0D%0A%0D%0AFrom: ${formData.get('name')} (${formData.get('email')}, ${formData.get('phone')})`;
+            const mailtoLink = `mailto:ortoup@ortoup.com.br?subject=Novo Contato de ${formData.get('name')}&body=${formData.get('message')}%0D%0A%0D%0ADe: ${formData.get('name')} (${formData.get('email')}, ${formData.get('phone')})`;
             window.location.href = mailtoLink;
             setStatus('success');
         }, 1000);
@@ -43,44 +43,44 @@ export default function ContactForm() {
         }, (error) => {
             console.log(error.text);
             setStatus('error');
-            setErrorMessage('Failed to send message. Please try again later or contact us directly.');
+            setErrorMessage('Falha ao enviar a mensagem. Tente novamente mais tarde ou fale conosco diretamente.');
         });
     }
   };
 
   return (
     <div className="p-40 bg-color-op-1 rounded-1">
-      <h3>Get In Touch</h3>
+      <h3>Fale Conosco</h3>
       <form ref={form} onSubmit={sendEmail} name="contactForm" id="contact_form" className="form-border">
         <div className="mb-4">
-          <input type="text" name="name" id="name" className="form-control" placeholder="Your Name" required />
+          <input type="text" name="name" id="name" className="form-control" placeholder="Seu Nome" required />
         </div>
 
         <div className="mb-4">
-          <input type="email" name="email" id="email" className="form-control" placeholder="Your Email" required />
+          <input type="email" name="email" id="email" className="form-control" placeholder="Seu E-mail" required />
         </div>
 
         <div className="mb-4">
-          <input type="text" name="phone" id="phone" className="form-control" placeholder="Your Phone" required />
+          <input type="text" name="phone" id="phone" className="form-control" placeholder="Seu Telefone" required />
         </div>
 
         <div className="mb-4 mb20">
-          <textarea name="message" id="message" className="form-control" placeholder="Your Message" required></textarea>
+          <textarea name="message" id="message" className="form-control" placeholder="Sua Mensagem" required></textarea>
         </div>
 
         <div id='submit' className="mt20">
-          <input 
-            type='submit' 
-            id='send_message' 
-            value={status === 'sending' ? 'Sending...' : 'Send Message'} 
-            className="btn-main" 
+          <input
+            type='submit'
+            id='send_message'
+            value={status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
+            className="btn-main"
             disabled={status === 'sending'}
           />
         </div>
 
         {status === 'success' && (
           <div id="success_message" className='success' style={{ display: 'block' }}>
-            Your message has been sent successfully.
+            Sua mensagem foi enviada com sucesso.
           </div>
         )}
         

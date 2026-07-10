@@ -402,26 +402,58 @@ export default function ScriptHandler() {
     resetMobileHeaderState();
     window.addEventListener('resize', resetMobileHeaderState);
 
-    const handleMenuClick = () => {
-      document.body.classList.add('no-scroll');
-    };
-    const handleCloseClick = () => {
-      document.body.classList.remove('no-scroll');
-    };
-
+    const extraWrap = document.getElementById('extra-wrap');
+    const extraContent = document.getElementById('extra-content');
     const btnExtra = document.getElementById('btn-extra');
     const btnClose = document.getElementById('btn-close');
 
-    if (btnExtra) btnExtra.addEventListener('click', handleMenuClick);
-    if (btnClose) btnClose.addEventListener('click', handleCloseClick);
+    const openExtraWrap = () => {
+      extraWrap?.classList.add('open');
+      document.body.classList.add('no-scroll');
+    };
+    const closeExtraWrap = () => {
+      extraWrap?.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    };
+    const handleExtraToggle = () => {
+      if (extraWrap?.classList.contains('open')) {
+        closeExtraWrap();
+      } else {
+        openExtraWrap();
+      }
+    };
+    const handleBackdropClick = (e: MouseEvent) => {
+      // Close when clicking the dark backdrop itself, not the panel content
+      if (e.target === extraWrap) closeExtraWrap();
+    };
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeExtraWrap();
+    };
+    const handleContentLinkClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('a')) closeExtraWrap();
+    };
+
+    // Safety net: never start a new page with a stale lock from the previous one
+    closeExtraWrap();
+
+    if (btnExtra) btnExtra.addEventListener('click', handleExtraToggle);
+    if (btnClose) btnClose.addEventListener('click', closeExtraWrap);
+    if (extraWrap) extraWrap.addEventListener('click', handleBackdropClick);
+    window.addEventListener('keydown', handleEscape);
+    // Clicking a link inside the panel (e.g. a service) should close it too
+    if (extraContent) extraContent.addEventListener('click', handleContentLinkClick);
 
     return () => {
       clearTimeout(timerA);
       clearTimeout(timerB);
       clearTimeout(timerC);
       window.removeEventListener('resize', resetMobileHeaderState);
-      if (btnExtra) btnExtra.removeEventListener('click', handleMenuClick);
-      if (btnClose) btnClose.removeEventListener('click', handleCloseClick);
+      window.removeEventListener('keydown', handleEscape);
+      if (btnExtra) btnExtra.removeEventListener('click', handleExtraToggle);
+      if (btnClose) btnClose.removeEventListener('click', closeExtraWrap);
+      if (extraWrap) extraWrap.removeEventListener('click', handleBackdropClick);
+      if (extraContent) extraContent.removeEventListener('click', handleContentLinkClick);
       if (cleanupMobileMenu) cleanupMobileMenu();
     };
   }, [pathname]);

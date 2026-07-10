@@ -1,4 +1,12 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { services } from '@/lib/services';
+
+export const metadata: Metadata = {
+  title: 'Nossos Serviços',
+  description: 'Implantes dentários, ortodontia, alinhadores invisíveis, clareamento, lentes de contato dental, endodontia, prótese, cirurgia oral e clínica geral. Conheça os serviços da Orto Up.',
+  alternates: { canonical: '/services' },
+};
 
 export default function Services() {
   return (
@@ -7,127 +15,43 @@ export default function Services() {
         <div className="container relative z-2">
           <div className="row align-items-center">
             <div className="col-lg-12">
-              <h1 className="wow fadeInUp">Our Services</h1>
+              <h1 className="wow fadeInUp">Nossos Serviços</h1>
               <div className="border-bottom my-3"></div>
               <ul className="crumb wow fadeInDown">
-                <li><Link href="/">Home</Link></li>
-                <li className="active">Our Services</li>
+                <li><Link href="/">Início</Link></li>
+                <li className="active">Nossos Serviços</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      
+
       <section>
         <div className="container">
+          <div className="row g-4 justify-content-center mb-4">
+            <div className="col-lg-8 text-center">
+              <p className="wow fadeInUp">Atendemos com planos de saúde e oferecemos um cuidado odontológico completo, do check-up de rotina a tratamentos especializados, sempre com atendimento humanizado.</p>
+            </div>
+          </div>
+
           <div className="row g-4">
-            <div className="col-lg-3 col-md-6">
-              <div className="hover">
-                <div className="bg-color-op-1 h-100 p-40 rounded-1">
-                  <img src="/images/icons/tooth-1.png" className="w-70px mb-3 wow scaleIn" alt="" />
-                  <div className="relative mt-4 wow fadeInUp">
-                    <h4>General Dentistry</h4>
-                    <p>Complete oral care for every smile with cleanings, exams, and more.</p>
-                    <Link className="btn-plus" href="/services/general-dentistry">
-                      <i className="fa fa-plus"></i>
-                      <span>Read more</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="hover">
-                <div className="bg-color-op-1 h-100 p-40 rounded-1">
-                  <img src="/images/icons/tooth-2.png" className="w-70px mb-3 wow scaleIn" alt="" />
-                  <div className="relative mt-4 wow fadeInUp">
-                    <h4>Cosmetic Dentistry</h4>
-                    <p>Enhance your smile’s beauty with whitening, veneers, and more.</p>
-                    <Link className="btn-plus" href="/services/cosmetic-dentistry">
-                      <i className="fa fa-plus"></i>
-                      <span>Read more</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="h-100 rounded-1" data-bgimage="url(/images/misc/s3.webp) center">
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="hover">
-                <div className="bg-color-op-1 h-100 p-40 rounded-1">
-                  <img src="/images/icons/tooth-3.png" className="w-70px mb-3 wow scaleIn" alt="" />
-                  <div className="relative mt-4 wow fadeInUp">
-                    <h4>Pediatric Dentistry</h4>
-                    <p>Gentle and fun dental care for kids to grow healthy, happy smiles.</p>
-                    <Link className="btn-plus" href="/services/pediatric-dentistry">
-                      <i className="fa fa-plus"></i>
-                      <span>Read more</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="col-lg-3 col-md-6">
-              <div className="hover">
-                <div className="bg-color-op-1 h-100 p-40 rounded-1">
-                  <img src="/images/icons/tooth-4.png" className="w-70px mb-3 wow scaleIn" alt="" />
-                  <div className="relative mt-4 wow fadeInUp">
-                    <h4>Restorative Dentistry</h4>
-                    <p>Repair and restore your teeth for lasting comfort and function.</p>
-                    <Link className="btn-plus" href="/services/restorative-dentistry">
-                      <i className="fa fa-plus"></i>
-                      <span>Read more</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="h-100 rounded-1" data-bgimage="url(/images/misc/s2.webp) center">
-              </div>
-            </div>
-            
-            {/* Added extra items to complete the grid based on pattern */}
-            <div className="col-lg-3 col-md-6">
+            {services.map((service) => (
+              <div key={service.slug} className="col-lg-4 col-md-6">
                 <div className="hover">
-                    <div className="bg-color-op-1 h-100 p-40 rounded-1">
-                        <img src="/images/icons/tooth-1.png" className="w-70px mb-3 wow scaleIn" alt="" />
-                        <div className="relative mt-4 wow fadeInUp">
-                            <h4>Preventive Dentistry</h4>
-                            <p>Prevent problems before they start with our comprehensive care.</p>
-                            <Link className="btn-plus" href="/services/preventive-dentistry">
-                                <i className="fa fa-plus"></i>
-                                <span>Read more</span>
-                            </Link>
-                        </div>
+                  <div className="bg-color-op-1 h-100 p-40 rounded-1">
+                    <img src={service.icon} className="w-70px mb-3 wow scaleIn" alt={`Ícone ${service.title}`} />
+                    <div className="relative mt-4 wow fadeInUp">
+                      <h4>{service.title}</h4>
+                      <p>{service.description}</p>
+                      <Link className="btn-plus" href={`/services/${service.slug}`}>
+                        <i className="fa fa-plus"></i>
+                        <span>Saiba mais</span>
+                      </Link>
                     </div>
+                  </div>
                 </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-                <div className="hover">
-                    <div className="bg-color-op-1 h-100 p-40 rounded-1">
-                        <img src="/images/icons/tooth-2.png" className="w-70px mb-3 wow scaleIn" alt="" />
-                        <div className="relative mt-4 wow fadeInUp">
-                            <h4>Orthodontics</h4>
-                            <p>Straighten your teeth and correct your bite with modern solutions.</p>
-                            <Link className="btn-plus" href="/services/orthodontics">
-                                <i className="fa fa-plus"></i>
-                                <span>Read more</span>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+              </div>
+            ))}
           </div>
         </div>
       </section>
