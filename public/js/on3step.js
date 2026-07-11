@@ -1235,12 +1235,8 @@
             $('.lazy').lazy();
         });
 
-        // button effect //
-
-        $('.fx-slide').each(function() {
-            var text = jQuery(this).text();
-            jQuery(this).attr('data-hover',text);
-        });
+        // button effect (data-hover) handled in ScriptHandler.tsx — re-runs on every
+        // page change so buttons on newly-navigated pages get it too, not just this once.
 
         // switch
 

@@ -7,6 +7,12 @@ export default function ScriptHandler() {
   const pathname = usePathname();
 
   useEffect(() => {
+    const initFxSlideButtons = () => {
+      document.querySelectorAll<HTMLElement>('.fx-slide').forEach((el) => {
+        el.setAttribute('data-hover', el.textContent?.trim() || '');
+      });
+    };
+
     const initCustomBackgrounds = () => {
       const colorElements = document.querySelectorAll<HTMLElement>('[data-bgcolor]');
       colorElements.forEach((el) => {
@@ -401,6 +407,11 @@ export default function ScriptHandler() {
 
     resetMobileHeaderState();
     window.addEventListener('resize', resetMobileHeaderState);
+
+    // Runs on every page change (not gated on jQuery) so .fx-slide buttons
+    // rendered by the new page always get their hover text, without needing
+    // a full reload — on3step.js only sets this once, on the very first load.
+    initFxSlideButtons();
 
     const extraWrap = document.getElementById('extra-wrap');
     const extraContent = document.getElementById('extra-content');

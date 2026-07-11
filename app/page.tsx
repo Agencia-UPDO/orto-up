@@ -26,7 +26,7 @@ export default function Home() {
               </div>
 
               <div className="d-flex align-items-center pb-4 mb-4 c wow fadeInUp" data-wow-delay=".9s">
-                <Link className="btn-main me-5 wow fadeInUp" data-wow-delay=".6s" href="/booking">Agendar Consulta</Link>
+                <Link className="btn-main fx-slide me-5 wow fadeInUp" data-wow-delay=".6s" href="/booking"><span>Agendar Consulta</span></Link>
                 <div className="d-flex align-items-center">
                   <div className="me-3 fs-14 d-rating">
                     <i className="fa fa-solid fa-star"></i>

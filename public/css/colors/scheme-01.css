@@ -6,6 +6,7 @@
   --secondary-color: #47A4AD;
   --secondary-color-rgb: 71, 164, 173;
   --heading-font: "Ubuntu", Helvetica, Arial, sans-serif;
+  --btn-hover-bg: var(--secondary-color);
 }
 
 footer {
@@ -28,4 +29,13 @@ footer a:hover {
 .social-icons i:hover {
   background: rgba(255, 255, 255, .32);
   color: var(--bg-dark-1);
+}
+
+/* The theme's own :focus rule is declared after :hover in style.css, so
+   clicking a btn-main link (giving it focus) while still hovering it makes
+   the background snap back to purple. Force hover to win in that combo. */
+a.btn-main:hover,
+a.btn-main:hover:focus,
+a.btn-main:hover:active {
+  background: var(--btn-hover-bg);
 }
