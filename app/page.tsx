@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import { services } from '@/lib/services';
 import PartnersCarousel from '@/components/PartnersCarousel';
@@ -60,16 +61,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-0">
+      <section className="bg-light pt-80 pb-80">
         <div className="container">
           <div className="text-center mb-4">
-            <span className="fs-14 fw-600 op-6">Atendemos os principais convênios</span>
+            <div className="subtitle wow fadeInUp mb-3">Convênios</div>
+            <h2 className="wow fadeInUp" data-wow-delay=".2s">Atendemos os Principais Planos de Saúde</h2>
           </div>
           <PartnersCarousel />
         </div>
       </section>
 
-      <section className="pt-0">
+      <section className="pt-80">
         <div className="container">
           <div className="row g-4 gx-5 align-items-center">
             <div className="col-lg-6">
@@ -210,6 +212,18 @@ export default function Home() {
 
       <section>
         <div className="container">
+          <div className="row justify-content-center text-center mb-4">
+            <div className="col-lg-7">
+              <div className="subtitle wow fadeInUp mb-3">Avaliação dos Pacientes</div>
+              <h2 className="wow fadeInUp" data-wow-delay=".2s">O Que Nossos Pacientes Dizem</h2>
+            </div>
+          </div>
+          <div className="elfsight-app-6a7c21ec-3187-4264-a0bb-f442bc2e4a94" data-elfsight-app-lazy></div>
+        </div>
+      </section>
+
+      <section className="bg-color-op-1">
+        <div className="container">
           <div className="row g-4">
             <div className="col-lg-5">
               <div className="subtitle id-color wow fadeInUp" data-wow-delay=".0s">Tudo o Que Você Precisa Saber</div>
@@ -255,25 +269,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-color-op-1">
-        <div className="container">
-          <div className="row justify-content-center text-center">
-            <div className="col-lg-7">
-              <div className="subtitle wow fadeInUp mb-3">Avaliação dos Pacientes</div>
-              <h2 className="wow fadeInUp" data-wow-delay=".2s">Nota 5,0 no Google</h2>
-              <div className="fs-24 d-rating my-3">
-                <i className="fa fa-solid fa-star"></i>
-                <i className="fa fa-solid fa-star"></i>
-                <i className="fa fa-solid fa-star"></i>
-                <i className="fa fa-solid fa-star"></i>
-                <i className="fa fa-solid fa-star"></i>
-              </div>
-              <p className="wow fadeInUp">Com base em 41 avaliações de pacientes atendidos na Orto Up.</p>
-              <Link className="btn-main fx-slide wow fadeInUp" href="https://www.google.com/search?q=Orto+Up+Reabilita%C3%A7%C3%A3o+Oral" target="_blank"><span>Ver Avaliações no Google</span></Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" async />
     </>
   );
 }

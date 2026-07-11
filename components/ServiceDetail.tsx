@@ -83,7 +83,7 @@ export default function ServiceDetail({
       </section>
 
       {steps && steps.length > 0 && (
-        <section className="bg-color-op-1 pt-0 pb-100">
+        <section className="bg-color-op-1 pt-80 pb-80">
           <div className="container">
             <div className="row g-4 justify-content-center mb-4">
               <div className="col-lg-7 text-center">

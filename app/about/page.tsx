@@ -73,7 +73,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-color-op-1">
+      <section className="bg-color-op-1 pt-80 pb-80">
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-4">
@@ -177,16 +177,17 @@ export default function About() {
         </div>
       </section>
 
-      <section className="pt-0">
+      <section className="bg-light pt-80 pb-80">
         <div className="container">
           <div className="text-center mb-4">
-            <span className="fs-14 fw-600 op-6">Atendemos os principais convênios</span>
+            <div className="subtitle wow fadeInUp mb-3">Convênios</div>
+            <h2 className="wow fadeInUp" data-wow-delay=".2s">Atendemos os Principais Planos de Saúde</h2>
           </div>
           <PartnersCarousel />
         </div>
       </section>
 
-      <section className="bg-color-op-1 pt-0">
+      <section className="bg-color-op-1 pt-80 pb-80">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-3 text-center">

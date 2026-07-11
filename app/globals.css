@@ -83,48 +83,36 @@ body.no-scroll {
   border-radius: 3px;
 }
 
-/* Partners / convênios marquee carousel */
-.partners-marquee {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-}
-
-.partners-marquee-track {
+/* Partners / convênios */
+.partners-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  width: max-content;
-  animation: partners-marquee-scroll 25s linear infinite;
+  justify-content: center;
+  gap: 10px;
 }
 
-.partners-marquee:hover .partners-marquee-track {
-  animation-play-state: paused;
-}
-
-.partners-marquee-item {
-  flex: 0 0 auto;
+.partners-row-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 50px;
+  padding: 10px 40px;
 }
 
-.partners-marquee-item img {
+.partners-row-item img {
   height: 60px;
   width: auto;
   opacity: 0.85;
   transition: opacity 0.2s ease;
 }
 
-.partners-marquee-item img:hover {
+.partners-row-item img:hover {
   opacity: 1;
 }
 
-@keyframes partners-marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+/* Hide the Elfsight Google Reviews widget's own built-in title —
+   we already show our own heading above it. Class is auto-generated
+   by their build (styled-components), so it may break on their updates. */
+.WidgetTitle__Header-sc-80558b97-2 {
+  display: none !important;
 }
