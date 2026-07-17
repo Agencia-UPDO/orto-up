@@ -4,7 +4,7 @@ import ServiceDetail from '@/components/ServiceDetail';
 export const metadata: Metadata = {
   title: 'Clareamento Dental',
   description: 'Clareamento dental personalizado para cada paciente, com acompanhamento profissional. Conheça o tratamento de clareamento da Orto Up em São José dos Pinhais.',
-  alternates: { canonical: '/services/clareamento-dental' },
+  alternates: { canonical: '/servicos/clareamento-dental' },
 };
 
 export default function ClareamentoDental() {

@@ -26,7 +26,7 @@ export default function Home() {
               </div>
 
               <div className="d-flex align-items-center pb-4 mb-4 c wow fadeInUp" data-wow-delay=".9s">
-                <Link className="btn-main fx-slide me-5 wow fadeInUp" data-wow-delay=".6s" href="/booking"><span>Agendar Consulta</span></Link>
+                <Link className="btn-main fx-slide me-5 wow fadeInUp" data-wow-delay=".6s" href="/agendamento"><span>Agendar Consulta</span></Link>
                 <div className="d-flex align-items-center">
                   <div className="me-3 fs-14 d-rating">
                     <i className="fa fa-solid fa-star"></i>
@@ -112,7 +112,7 @@ export default function Home() {
                   <li>Ambiente Moderno</li>
                 </ul>
 
-                <Link className="btn-main fx-slide wow fadeInUp" data-wow-delay=".8s" href="/about"><span>Conheça Nossa História</span></Link>
+                <Link className="btn-main fx-slide wow fadeInUp" data-wow-delay=".8s" href="/sobre"><span>Conheça Nossa História</span></Link>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function Home() {
                     <div className="relative mt-4 wow fadeInUp">
                       <h4>{service.title}</h4>
                       <p>{service.description}</p>
-                      <Link className="btn-plus" href={`/services/${service.slug}`}>
+                      <Link className="btn-plus" href={`/servicos/${service.slug}`}>
                         <i className="fa fa-plus"></i>
                         <span>Saiba mais</span>
                       </Link>

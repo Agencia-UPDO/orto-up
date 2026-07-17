@@ -116,3 +116,105 @@ body.no-scroll {
 .WidgetTitle__Header-sc-80558b97-2 {
   display: none !important;
 }
+
+/* Legal pages */
+.legal-page {
+  background: #f8f6fa;
+}
+
+.legal-page .legal-summary,
+.legal-page .legal-content {
+  background: #fff;
+  border: 1px solid rgba(104, 66, 134, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(45, 31, 55, 0.06);
+}
+
+.legal-page .legal-summary {
+  height: auto !important;
+  position: sticky;
+  top: 120px;
+  padding: 28px;
+}
+
+.legal-page .legal-summary h2 {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.legal-page .legal-summary ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.legal-page .legal-summary li + li {
+  margin-top: 10px;
+}
+
+.legal-page .legal-summary a:hover {
+  color: #684286;
+}
+
+.legal-page .legal-content {
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.legal-page .legal-intro {
+  color: #555;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.legal-page .legal-section {
+  padding: 0 !important;
+  scroll-margin-top: 120px;
+}
+
+.legal-page .legal-section + .legal-section {
+  border-top: 1px solid rgba(104, 66, 134, 0.12);
+  margin-top: 24px;
+  padding-top: 24px !important;
+}
+
+.legal-page .legal-section h2 {
+  color: #31253a;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  margin-bottom: 16px;
+}
+
+.legal-page .legal-section p,
+.legal-page .legal-section li {
+  line-height: 1.8;
+}
+
+.legal-page .legal-section ul {
+  padding-left: 22px;
+}
+
+.legal-page .legal-notice {
+  background: rgba(104, 66, 134, 0.08);
+  border-left: 4px solid #684286;
+  border-radius: 0 10px 10px 0;
+  margin-top: 20px;
+  padding: 18px 20px;
+}
+
+@media (max-width: 991px) {
+  .legal-page .legal-summary {
+    position: static;
+  }
+}
+
+/* Service detail: vertically center the "Para Quem É Indicado" content */
+.service-indicated-section {
+  padding-bottom: 60px !important;
+  padding-top: 60px !important;
+}
+
+@media (max-width: 991px) {
+  .service-indicated-section {
+    padding-bottom: 48px !important;
+    padding-top: 48px !important;
+  }
+}

@@ -182,15 +182,15 @@ export default function RootLayout({
 
                 <h5>Nossos Serviços</h5>
                 <ul className="ul-check">
-                    <li><Link href="/services/implantes-dentarios">Implantes Dentários</Link></li>
-                    <li><Link href="/services/ortodontia">Ortodontia</Link></li>
-                    <li><Link href="/services/alinhadores-invisiveis">Alinhadores Invisíveis</Link></li>
-                    <li><Link href="/services/clareamento-dental">Clareamento Dental</Link></li>
-                    <li><Link href="/services/lentes-de-contato-dental">Lentes de Contato Dental</Link></li>
-                    <li><Link href="/services/endodontia">Endodontia</Link></li>
-                    <li><Link href="/services/protese-dentaria">Prótese Dentária</Link></li>
-                    <li><Link href="/services/cirurgia-oral">Cirurgia Oral</Link></li>
-                    <li><Link href="/services/clinica-geral">Clínica Geral</Link></li>
+                    <li><Link href="/servicos/implantes-dentarios">Implantes Dentários</Link></li>
+                    <li><Link href="/servicos/ortodontia">Ortodontia</Link></li>
+                    <li><Link href="/servicos/alinhadores-invisiveis">Alinhadores Invisíveis</Link></li>
+                    <li><Link href="/servicos/clareamento-dental">Clareamento Dental</Link></li>
+                    <li><Link href="/servicos/lentes-de-contato-dental">Lentes de Contato Dental</Link></li>
+                    <li><Link href="/servicos/endodontia">Endodontia</Link></li>
+                    <li><Link href="/servicos/protese-dentaria">Prótese Dentária</Link></li>
+                    <li><Link href="/servicos/cirurgia-oral">Cirurgia Oral</Link></li>
+                    <li><Link href="/servicos/clinica-geral">Clínica Geral</Link></li>
                 </ul>
 
                 <div className="spacer-30-line"></div>

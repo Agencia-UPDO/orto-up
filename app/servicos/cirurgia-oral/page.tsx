@@ -4,7 +4,7 @@ import ServiceDetail from '@/components/ServiceDetail';
 export const metadata: Metadata = {
   title: 'Cirurgia Oral',
   description: 'Procedimentos de cirurgia oral realizados com segurança e técnica apurada. Conheça a cirurgia oral da Orto Up em São José dos Pinhais.',
-  alternates: { canonical: '/services/cirurgia-oral' },
+  alternates: { canonical: '/servicos/cirurgia-oral' },
 };
 
 export default function CirurgiaOral() {

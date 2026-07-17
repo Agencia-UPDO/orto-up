@@ -31,29 +31,29 @@ export default function Header({
                 {/* mainemenu begin */}
                 <ul id="mainmenu">
                   <li><Link className="menu-item" href="/">Início</Link></li>
-                  <li><Link className="menu-item" href="/about">Sobre Nós</Link></li>
+                  <li><Link className="menu-item" href="/sobre">Sobre Nós</Link></li>
                   <li>
-                    <Link className="menu-item" href="/services">Serviços</Link>
+                    <Link className="menu-item" href="/servicos">Serviços</Link>
                     <ul>
-                      <li><Link href="/services/implantes-dentarios">Implantes Dentários</Link></li>
-                      <li><Link href="/services/ortodontia">Ortodontia</Link></li>
-                      <li><Link href="/services/alinhadores-invisiveis">Alinhadores Invisíveis</Link></li>
-                      <li><Link href="/services/clareamento-dental">Clareamento Dental</Link></li>
-                      <li><Link href="/services/lentes-de-contato-dental">Lentes de Contato Dental</Link></li>
-                      <li><Link href="/services/endodontia">Endodontia</Link></li>
-                      <li><Link href="/services/protese-dentaria">Prótese Dentária</Link></li>
-                      <li><Link href="/services/cirurgia-oral">Cirurgia Oral</Link></li>
-                      <li><Link href="/services/clinica-geral">Clínica Geral</Link></li>
-                      <li><Link href="/services">Todos os Serviços</Link></li>
+                      <li><Link href="/servicos/implantes-dentarios">Implantes Dentários</Link></li>
+                      <li><Link href="/servicos/ortodontia">Ortodontia</Link></li>
+                      <li><Link href="/servicos/alinhadores-invisiveis">Alinhadores Invisíveis</Link></li>
+                      <li><Link href="/servicos/clareamento-dental">Clareamento Dental</Link></li>
+                      <li><Link href="/servicos/lentes-de-contato-dental">Lentes de Contato Dental</Link></li>
+                      <li><Link href="/servicos/endodontia">Endodontia</Link></li>
+                      <li><Link href="/servicos/protese-dentaria">Prótese Dentária</Link></li>
+                      <li><Link href="/servicos/cirurgia-oral">Cirurgia Oral</Link></li>
+                      <li><Link href="/servicos/clinica-geral">Clínica Geral</Link></li>
+                      <li><Link href="/servicos">Todos os Serviços</Link></li>
                     </ul>
                   </li>
-                  <li><Link className="menu-item" href="/contact">Contato</Link></li>
+                  <li><Link className="menu-item" href="/contato">Contato</Link></li>
                 </ul>
                 {/* mainmenu end */}
               </div>
               <div className="de-flex-col">
                 <div className="menu_side_area">
-                  <Link href="/booking" className="btn-main fx-slide"><span>Agendar Consulta</span></Link>
+                  <Link href="/agendamento" className="btn-main fx-slide"><span>Agendar Consulta</span></Link>
                   <span id="menu-btn"></span>
                 </div>
 

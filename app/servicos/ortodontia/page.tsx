@@ -4,7 +4,7 @@ import ServiceDetail from '@/components/ServiceDetail';
 export const metadata: Metadata = {
   title: 'Ortodontia',
   description: 'Aparelhos ortodônticos, incluindo o autoligado sem borrachinhas, para alinhar os dentes e corrigir a mordida. Tratamento ortodôntico da Orto Up em São José dos Pinhais.',
-  alternates: { canonical: '/services/ortodontia' },
+  alternates: { canonical: '/servicos/ortodontia' },
 };
 
 export default function Ortodontia() {

@@ -22,10 +22,10 @@ export default function Footer() {
                   <h5>Empresa</h5>
                   <ul>
                     <li><Link href="/">Início</Link></li>
-                    <li><Link href="/about">Sobre Nós</Link></li>
-                    <li><Link href="/services">Nossos Serviços</Link></li>
-                    <li><Link href="/contact">Contato</Link></li>
-                    <li><Link href="/booking">Agendar Consulta</Link></li>
+                    <li><Link href="/sobre">Sobre Nós</Link></li>
+                    <li><Link href="/servicos">Nossos Serviços</Link></li>
+                    <li><Link href="/contato">Contato</Link></li>
+                    <li><Link href="/agendamento">Agendar Consulta</Link></li>
                   </ul>
                 </div>
               </div>
@@ -33,15 +33,15 @@ export default function Footer() {
                 <div className="widget">
                   <h5>Nossos Serviços</h5>
                   <ul>
-                    <li><Link href="/services/implantes-dentarios">Implantes Dentários</Link></li>
-                    <li><Link href="/services/ortodontia">Ortodontia</Link></li>
-                    <li><Link href="/services/alinhadores-invisiveis">Alinhadores Invisíveis</Link></li>
-                    <li><Link href="/services/clareamento-dental">Clareamento Dental</Link></li>
-                    <li><Link href="/services/lentes-de-contato-dental">Lentes de Contato Dental</Link></li>
-                    <li><Link href="/services/endodontia">Endodontia</Link></li>
-                    <li><Link href="/services/protese-dentaria">Prótese Dentária</Link></li>
-                    <li><Link href="/services/cirurgia-oral">Cirurgia Oral</Link></li>
-                    <li><Link href="/services/clinica-geral">Clínica Geral</Link></li>
+                    <li><Link href="/servicos/implantes-dentarios">Implantes Dentários</Link></li>
+                    <li><Link href="/servicos/ortodontia">Ortodontia</Link></li>
+                    <li><Link href="/servicos/alinhadores-invisiveis">Alinhadores Invisíveis</Link></li>
+                    <li><Link href="/servicos/clareamento-dental">Clareamento Dental</Link></li>
+                    <li><Link href="/servicos/lentes-de-contato-dental">Lentes de Contato Dental</Link></li>
+                    <li><Link href="/servicos/endodontia">Endodontia</Link></li>
+                    <li><Link href="/servicos/protese-dentaria">Prótese Dentária</Link></li>
+                    <li><Link href="/servicos/cirurgia-oral">Cirurgia Oral</Link></li>
+                    <li><Link href="/servicos/clinica-geral">Clínica Geral</Link></li>
                   </ul>
                 </div>
               </div>
@@ -80,8 +80,8 @@ export default function Footer() {
                   Copyright {new Date().getFullYear()} - Orto Up Clínica Odontológica &middot; CNPJ 11.213.984/0001-05 &middot; CRO Clínica 1856
                 </div>
                 <ul className="menu-simple">
-                  <li><Link href="#">Termos &amp; Condições</Link></li>
-                  <li><Link href="#">Política de Privacidade</Link></li>
+                  <li><Link href="/termos-e-condicoes">Termos &amp; Condições</Link></li>
+                  <li><Link href="/politica-de-privacidade">Política de Privacidade</Link></li>
                 </ul>
               </div>
             </div>

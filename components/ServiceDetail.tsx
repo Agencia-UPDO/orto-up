@@ -34,7 +34,7 @@ export default function ServiceDetail({
               <div className="border-bottom my-3"></div>
               <ul className="crumb wow fadeInDown">
                 <li><Link href="/">Início</Link></li>
-                <li><Link href="/services">Serviços</Link></li>
+                <li><Link href="/servicos">Serviços</Link></li>
                 <li className="active">{title}</li>
               </ul>
             </div>
@@ -110,7 +110,7 @@ export default function ServiceDetail({
       )}
 
       {indicatedFor && indicatedFor.length > 0 && (
-        <section className="pt-0">
+        <section className="service-indicated-section">
           <div className="container">
             <div className="row g-4 gx-5 align-items-center">
               <div className="col-lg-5">
@@ -137,7 +137,7 @@ export default function ServiceDetail({
               <p className="mb-0">Fale conosco hoje mesmo e dê o primeiro passo rumo a um sorriso mais saudável. Atendemos com planos de saúde.</p>
             </div>
             <div className="col-lg-3 text-lg-end">
-              <Link className="btn-main fx-slide btn-line" href="/booking"><span>Agendar Consulta</span></Link>
+              <Link className="btn-main fx-slide btn-line" href="/agendamento"><span>Agendar Consulta</span></Link>
             </div>
           </div>
         </div>
