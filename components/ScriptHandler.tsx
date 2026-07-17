@@ -240,8 +240,13 @@ export default function ScriptHandler() {
       }
 
       const menuButton = document.getElementById('menu-btn');
-      if (menuButton && !isMenuOpen) {
-        menuButton.classList.remove('menu-open');
+      if (menuButton) {
+        menuButton.setAttribute('aria-expanded', String(isMenuOpen));
+        menuButton.setAttribute('aria-label', isMenuOpen ? 'Fechar menu' : 'Abrir menu');
+
+        if (!isMenuOpen) {
+          menuButton.classList.remove('menu-open');
+        }
       }
 
       if (!isMenuOpen) {
@@ -270,11 +275,14 @@ export default function ScriptHandler() {
         const $li = $(el);
         const $anchor = $li.children('a').first();
         if ($anchor.length) {
-          $('<span></span>').insertAfter($anchor);
+          const $mobileTrigger = $li.children('.mobile-services-trigger').first();
+          const $insertAfter = $mobileTrigger.length ? $mobileTrigger : $anchor;
+          $('<span></span>').insertAfter($insertAfter);
         }
       });
 
       $(document).off('click.mobileDentiaMenu', '#mainmenu a');
+      $(document).off('click.mobileDentiaServices', '.mobile-services-trigger');
       $(document).off('click.mobileDentiaMenuArrow', '#mainmenu li > span');
 
       const closeMenu = () => {
@@ -315,32 +323,43 @@ export default function ScriptHandler() {
         closeMenu();
       });
 
+      const toggleMobileSubmenu = ($span: any) => {
+        const $submenu = $span.parent().children('ul').first();
+        if (!$submenu.length) return;
+
+        const isOpening = !$span.hasClass('active');
+        $span.toggleClass('active', isOpening);
+        $span.parent().children('.mobile-services-trigger').attr('aria-expanded', String(isOpening));
+
+        if (!isOpening) {
+          $submenu.stop(true, true).animate({ height: '0' }, 300);
+          return;
+        }
+
+        $submenu.css('height', 'auto');
+        const targetHeight = $submenu.height();
+        $submenu.css('height', '0');
+        $submenu.stop(true, true).animate({ height: targetHeight }, 300);
+      };
+
+      $(document).on('click.mobileDentiaServices', '.mobile-services-trigger', function (this: any, e: any) {
+        if (window.innerWidth > 992) return;
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMobileSubmenu($(this).siblings('span').first());
+      });
+
       $(document).on('click.mobileDentiaMenuArrow', '#mainmenu li > span', function (this: any, e: any) {
         if (window.innerWidth > 992) return;
         e.preventDefault();
         e.stopPropagation();
-        const $span = $(this);
-        const $submenu = $span.parent().children('ul').first();
-        if (!$submenu.length) return;
-
-        if ($span.hasClass('active')) {
-          // Close menu
-          $span.removeClass('active');
-          $submenu.stop(true, true).animate({ height: '0' }, 300);
-        } else {
-          // Open menu
-          $span.addClass('active');
-          // Manual height animation (because CSS sets height: 0, not display: none)
-          $submenu.css('height', 'auto');
-          const targetHeight = $submenu.height();
-          $submenu.css('height', '0');
-          $submenu.stop(true, true).animate({ height: targetHeight }, 300);
-        }
+        toggleMobileSubmenu($(this));
       });
 
       return () => {
         $(document).off('click.mobileDentiaMenuBtn');
         $(document).off('click.mobileDentiaMenu');
+        $(document).off('click.mobileDentiaServices');
         $(document).off('click.mobileDentiaMenuArrow');
       };
     };

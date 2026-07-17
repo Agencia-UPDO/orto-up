@@ -6,7 +6,9 @@ export default function Footer() {
       <div className="container">
         <div className="row gx-5">
           <div className="col-lg-4 col-sm-6">
-            <img src="/images/logo-orto-up-white.png" className="logo-footer" alt="Orto Up" />
+            <Link href="/" aria-label="Ir para a página inicial">
+              <img src="/images/logo-orto-up-white.png" className="logo-footer" alt="Orto Up" />
+            </Link>
             <div className="spacer-20"></div>
             <p>Desde 2009, a Orto Up une excelência técnica e atendimento humanizado para transformar sorrisos e devolver autoestima e qualidade de vida aos nossos pacientes.</p>
 

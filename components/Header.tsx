@@ -33,7 +33,8 @@ export default function Header({
                   <li><Link className="menu-item" href="/">Início</Link></li>
                   <li><Link className="menu-item" href="/sobre">Sobre Nós</Link></li>
                   <li>
-                    <Link className="menu-item" href="/servicos">Serviços</Link>
+                    <Link className="menu-item services-desktop-link" href="/servicos">Serviços</Link>
+                    <button className="menu-item mobile-services-trigger" type="button" aria-expanded="false">Serviços</button>
                     <ul>
                       <li><Link href="/servicos/implantes-dentarios">Implantes Dentários</Link></li>
                       <li><Link href="/servicos/ortodontia">Ortodontia</Link></li>
@@ -48,13 +49,19 @@ export default function Header({
                     </ul>
                   </li>
                   <li><Link className="menu-item" href="/contato">Contato</Link></li>
+                  <li className="mobile-menu-appointment">
+                    <Link href="/agendamento">
+                      <i className="fa-regular fa-calendar-check" aria-hidden="true"></i>
+                      <span>Agendar consulta</span>
+                    </Link>
+                  </li>
                 </ul>
                 {/* mainmenu end */}
               </div>
               <div className="de-flex-col">
                 <div className="menu_side_area">
                   <Link href="/agendamento" className="btn-main fx-slide"><span>Agendar Consulta</span></Link>
-                  <span id="menu-btn"></span>
+                  <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false"></button>
                 </div>
 
                 <div id="btn-extra">

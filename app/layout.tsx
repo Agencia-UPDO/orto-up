@@ -155,6 +155,16 @@ export default function RootLayout({
         <ScriptHandler />
         <div id="wrapper">
           <a href="#" id="back-to-top"></a>
+          <Link
+            className="whatsapp-float"
+            href="https://wa.me/5541998497676?text=Ol%C3%A1%21%20Gostaria%20de%20entrar%20em%20contato."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Entre em contato pelo WhatsApp"
+          >
+            <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>Entre em contato</span>
+          </Link>
 
           {/* preloader begin */}
           <Preloader />
