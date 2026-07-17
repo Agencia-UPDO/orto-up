@@ -425,3 +425,22 @@ body.no-scroll {
     width: 100%;
   }
 }
+.hero-cta-button.btn-main {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-cta-button.btn-main::before {
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

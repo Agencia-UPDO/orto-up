@@ -25,8 +25,8 @@ export default function Home() {
                 <p className="mb-4 pe-lg-5">Desde 2009 no Afonso Pena, São José dos Pinhais, unimos excelência técnica e atendimento humanizado para transformar sorrisos. Atendemos com planos de saúde.</p>
               </div>
 
-              <div className="d-flex align-items-center pb-4 mb-4 c wow fadeInUp" data-wow-delay=".9s">
-                <Link className="btn-main fx-slide me-5 wow fadeInUp" data-wow-delay=".6s" href="/agendamento"><span>Agendar Consulta</span></Link>
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3 gap-md-0 pb-4 mb-4 c wow fadeInUp" data-wow-delay=".9s">
+                <Link className="btn-main fx-slide hero-cta-button me-0 me-md-5 wow fadeInUp" data-wow-delay=".6s" href="/agendamento"><span>Agendar Consulta</span></Link>
                 <div className="d-flex align-items-center">
                   <div className="me-3 fs-14 d-rating">
                     <i className="fa fa-solid fa-star"></i>
@@ -104,7 +104,7 @@ export default function Home() {
               <div className="me-lg-3">
                 <div className="subtitle s2 mb-3 wow fadeInUp" data-wow-delay=".0s">Sobre Nós</div>
                 <h2 className="wow fadeInUp" data-wow-delay=".2s">Odontologia de Excelência desde 2009</h2>
-                <p className="wow fadeInUp" data-wow-delay=".4s">Fundada pelo Dr. Marcelo Silva Araujo, a Orto Up nasceu do sonho de oferecer uma odontologia diferenciada, baseada em excelência técnica e atendimento humanizado — transformando sorrisos e devolvendo autoestima aos pacientes.</p>
+                <p className="wow fadeInUp" data-wow-delay=".4s">Fundada pelo Dr. Marcelo Silva Araujo, a Orto Up nasceu do sonho de oferecer uma odontologia diferenciada, baseada em excelência técnica e atendimento humanizado, transformando sorrisos e devolvendo autoestima aos pacientes.</p>
                 <ul className="ul-check text-dark cols-2 fw-600 mb-4 wow fadeInUp" data-wow-delay=".6s">
                   <li>Atendimento Humanizado</li>
                   <li>Aceitamos Planos de Saúde</li>
