@@ -218,3 +218,210 @@ body.no-scroll {
     padding-top: 48px !important;
   }
 }
+
+/* About page: featured professional profile */
+.team-profile-section {
+  background:
+    radial-gradient(circle at 8% 15%, rgba(104, 66, 134, 0.12), transparent 30%),
+    linear-gradient(145deg, #f8f5fa 0%, #f2edf6 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.team-profile-heading-text {
+  color: #657080;
+  font-size: 1.08rem;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.team-profile-card {
+  background: #fff;
+  border: 1px solid rgba(104, 66, 134, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 24px 65px rgba(42, 27, 55, 0.12);
+  overflow: hidden;
+}
+
+.team-profile-photo-wrap {
+  height: 100%;
+  min-height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+.team-profile-photo-wrap::after {
+  background: linear-gradient(180deg, transparent 52%, rgba(24, 15, 31, 0.72) 100%);
+  content: '';
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.team-profile-photo {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.team-profile-badge {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 14px;
+  bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  left: 28px;
+  padding: 14px 18px;
+  position: absolute;
+  right: 28px;
+  z-index: 2;
+}
+
+.team-profile-badge span {
+  color: #6d7580;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.team-profile-badge strong {
+  color: #684286;
+  font-size: 1.28rem;
+  line-height: 1.25;
+}
+
+.team-profile-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: clamp(38px, 5vw, 72px);
+}
+
+.team-profile-eyebrow {
+  color: #684286;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.team-profile-content h3 {
+  color: #142852;
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  margin-bottom: 7px;
+}
+
+.team-profile-specialty {
+  color: #684286;
+  font-size: 1.04rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.team-profile-specialty span {
+  margin: 0 6px;
+  opacity: 0.55;
+}
+
+.team-profile-intro {
+  color: #596575;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.team-credentials {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 28px;
+}
+
+.team-credential {
+  align-items: center;
+  background: #f8f6fa;
+  border: 1px solid rgba(104, 66, 134, 0.1);
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  min-height: 88px;
+  padding: 15px;
+}
+
+.team-credential i {
+  align-items: center;
+  background: rgba(104, 66, 134, 0.11);
+  border-radius: 10px;
+  color: #684286;
+  display: flex;
+  flex: 0 0 40px;
+  font-size: 1.2rem;
+  height: 40px;
+  justify-content: center;
+}
+
+.team-credential span {
+  color: #7c8490;
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.team-credential strong {
+  color: #25334e;
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.team-profile-content .btn-main {
+  align-self: flex-start;
+}
+
+@media (max-width: 991px) {
+  .team-profile-photo-wrap {
+    min-height: 540px;
+  }
+
+  .team-profile-photo {
+    object-position: center 30%;
+  }
+}
+
+@media (max-width: 575px) {
+  .team-profile-card {
+    border-radius: 18px;
+  }
+
+  .team-profile-photo-wrap {
+    min-height: 460px;
+  }
+
+  .team-profile-badge {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .team-profile-content {
+    padding: 32px 24px 38px;
+  }
+
+  .team-credentials {
+    grid-template-columns: 1fr;
+  }
+
+  .team-profile-content .btn-main {
+    text-align: center;
+    width: 100%;
+  }
+}

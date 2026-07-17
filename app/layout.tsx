@@ -64,7 +64,11 @@ export const metadata: Metadata = {
     images: ["/images/fotos-clinica/sala-espera-orto-up-01.webp"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: {
+      url: "/images/icons/favicon-ortoup.png",
+      type: "image/png",
+      sizes: "512x512",
+    },
   },
 };
 

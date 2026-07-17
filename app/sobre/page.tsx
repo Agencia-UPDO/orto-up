@@ -187,31 +187,79 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-color-op-1 pt-80 pb-80">
+      <section id="equipe" className="team-profile-section pt-80 pb-80">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3 text-center">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
               <div className="subtitle wow fadeInUp mb-3">Nossa Equipe</div>
-              <h2 className="wow fadeInUp" data-wow-delay=".2s">Quem Cuida do Seu Sorriso</h2>
+              <h2 className="wow fadeInUp" data-wow-delay=".2s">Conheça o Dr. Marcelo</h2>
+              <p className="team-profile-heading-text wow fadeInUp" data-wow-delay=".3s">
+                Experiência, precisão e cuidado humano em cada etapa do seu tratamento.
+              </p>
               <div className="spacer-single"></div>
             </div>
           </div>
-          <div className="row g-4 justify-content-center">
-            <div className="col-lg-6">
-              <div className="bg-light rounded-1 relative overflow-hidden">
-                <div className="row g-0 align-items-center">
-                  <div className="col-md-5">
-                    <img src="/images/fotos-clinica/atendimento-dr-marcelo.webp" className="w-100 rounded" alt="Dr. Marcelo Silva Araujo" />
+
+          <div className="team-profile-card wow fadeInUp" data-wow-delay=".35s">
+            <div className="row g-0 align-items-stretch">
+              <div className="col-lg-5">
+                <div className="team-profile-photo-wrap">
+                  <img
+                    src="/images/fotos-clinica/atendimento-dr-marcelo.webp"
+                    className="team-profile-photo"
+                    alt="Dr. Marcelo Silva Araujo durante atendimento odontológico"
+                  />
+                  <div className="team-profile-badge">
+                    <span>Fundador da Orto Up</span>
+                    <strong>Desde 2009</strong>
                   </div>
-                  <div className="col-md-7">
-                    <div className="h-100 p-40">
-                      <h3 className="mb-0">Dr. Marcelo Silva Araujo</h3>
-                      <p className="id-color">Prótese e Implante &middot; CRO 20264</p>
-                      <p className="mb-0">
-                        Cirurgião-dentista formado pela Pontifícia Universidade Católica do Paraná em 2008. Em 2009, fundou a Orto Up, clínica voltada à excelência em tratamentos odontológicos e ao cuidado humanizado dos pacientes. É especialista em Implantodontia pelo ILAPEO e especialista em Prótese Dentária pela Universidade Tuiuti do Paraná, mantendo-se sempre atualizado por meio de cursos, aperfeiçoamentos e congressos de destaque na área odontológica.
-                      </p>
+                </div>
+              </div>
+
+              <div className="col-lg-7">
+                <div className="team-profile-content">
+                  <div className="team-profile-eyebrow">Quem cuida do seu sorriso</div>
+                  <h3>Dr. Marcelo Silva Araujo</h3>
+                  <p className="team-profile-specialty">Prótese e Implante <span>&middot;</span> CRO 20264</p>
+
+                  <p className="team-profile-intro">
+                    Cirurgião-dentista formado pela PUCPR, o Dr. Marcelo fundou a Orto Up com o propósito de unir excelência técnica, planejamento cuidadoso e um atendimento verdadeiramente próximo.
+                  </p>
+
+                  <div className="team-credentials" aria-label="Formação e especializações">
+                    <div className="team-credential">
+                      <i className="icofont-certificate-alt-1" aria-hidden="true"></i>
+                      <div>
+                        <span>Formação</span>
+                        <strong>Odontologia — PUCPR, 2008</strong>
+                      </div>
+                    </div>
+                    <div className="team-credential">
+                      <i className="icofont-tooth" aria-hidden="true"></i>
+                      <div>
+                        <span>Especialização</span>
+                        <strong>Implantodontia — ILAPEO</strong>
+                      </div>
+                    </div>
+                    <div className="team-credential">
+                      <i className="icofont-medical-sign-alt" aria-hidden="true"></i>
+                      <div>
+                        <span>Especialização</span>
+                        <strong>Prótese Dentária — UTP</strong>
+                      </div>
+                    </div>
+                    <div className="team-credential">
+                      <i className="icofont-badge" aria-hidden="true"></i>
+                      <div>
+                        <span>Registro profissional</span>
+                        <strong>CRO 20264</strong>
+                      </div>
                     </div>
                   </div>
+
+                  <Link className="btn-main fx-slide" href="/agendamento">
+                    <span>Agendar com Dr. Marcelo</span>
+                  </Link>
                 </div>
               </div>
             </div>
