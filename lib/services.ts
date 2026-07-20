@@ -40,13 +40,13 @@ export const services: Service[] = [
     slug: 'endodontia',
     title: 'Endodontia',
     icon: '/images/icons/icon-endodontia.png',
-    description: 'Tratamento de canal com tecnologia que permite a realização em sessão única.',
+    description: 'Tratamento de canal com tecnologia avançada e segurança, realizado, na maioria dos casos, em sessão única.',
   },
   {
     slug: 'protese-dentaria',
     title: 'Prótese Dentária',
     icon: '/images/icons/icon-protese.png',
-    description: 'Próteses fixas e removíveis para restaurar a função e a estética de dentes ausentes.',
+    description: 'Próteses fixas e removíveis para restaurar a mastigação, a estética e a confiança de quem perdeu um ou mais dentes.',
   },
   {
     slug: 'cirurgia-oral',
@@ -58,6 +58,6 @@ export const services: Service[] = [
     slug: 'clinica-geral',
     title: 'Clínica Geral',
     icon: '/images/icons/icon-limpeza-de-dente.png',
-    description: 'Exames, limpezas e restaurações de rotina, a base de uma boa saúde bucal.',
+    description: 'Exames, limpezas e restaurações para prevenir problemas e manter a saúde bucal em todas as fases.',
   },
 ];

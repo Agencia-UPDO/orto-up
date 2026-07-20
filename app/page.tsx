@@ -132,7 +132,7 @@ export default function Home() {
             {services.map((service) => (
               <div key={service.slug} className="col-lg-4 col-sm-6">
                 <div className="hover">
-                  <div className="h-100">
+                  <div className="bg-color-op-1 h-100 p-40 rounded-1">
                     <img src={service.icon} className="w-70px mb-3 wow scaleIn" alt={`Ícone ${service.title}`} />
                     <div className="relative mt-4 wow fadeInUp">
                       <h4>{service.title}</h4>
@@ -226,41 +226,42 @@ export default function Home() {
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-5">
-              <div className="subtitle id-color wow fadeInUp" data-wow-delay=".0s">Tudo o Que Você Precisa Saber</div>
-              <h2 className="wow fadeInUp" data-wow-delay=".2s">Perguntas Frequentes</h2>
+              <div className="subtitle id-color wow fadeInUp" data-wow-delay=".0s">Antes de Agendar</div>
+              <h2 className="wow fadeInUp" data-wow-delay=".2s">Dúvidas Frequentes sobre a Orto Up</h2>
             </div>
 
             <div className="col-lg-7">
               <div className="accordion s2 wow fadeInUp">
                 <div className="accordion-section">
                   <div className="accordion-section-title" data-tab="#accordion-a1">
-                    Com que frequência devo visitar o dentista?
+                    Como funciona a primeira consulta?
                   </div>
-                  <div className="accordion-section-content" id="accordion-a1">É recomendado visitar seu dentista a cada 6 meses para uma consulta de rotina e limpeza, salvo orientação contrária.
+                  <div className="accordion-section-content" id="accordion-a1">
+                    A primeira consulta é o momento de entender suas necessidades, avaliar sua saúde bucal e conversar sobre as possibilidades de tratamento. Quando necessário, o dentista poderá solicitar exames antes de definir o plano de cuidados.
                   </div>
                   <div className="accordion-section-title" data-tab="#accordion-a2">
-                    A Orto Up atende por plano de saúde?
+                    Quais tratamentos a Orto Up oferece?
                   </div>
                   <div className="accordion-section-content" id="accordion-a2">
-                    Sim, atendemos pacientes com planos de saúde. Entre em contato para confirmar a cobertura do seu convênio.
+                    Oferecemos implantes dentários, próteses, ortodontia, alinhadores invisíveis, clareamento, lentes de contato dental, endodontia, cirurgia oral e clínica geral. <Link href="/servicos" className="id-color fw-bold">Conheça todos os serviços</Link>.
                   </div>
                   <div className="accordion-section-title" data-tab="#accordion-a3">
-                    Onde fica a clínica?
+                    A clínica atende por planos odontológicos?
                   </div>
                   <div className="accordion-section-content" id="accordion-a3">
-                    Estamos na Rua Almirante Alexandrino, 2300, no bairro Afonso Pena, em São José dos Pinhais - PR.
+                    Sim. Como a cobertura pode variar conforme o plano e o procedimento, entre em contato com nossa equipe para confirmar seu convênio antes da consulta.
                   </div>
                   <div className="accordion-section-title" data-tab="#accordion-a4">
-                    Quais são os horários de atendimento?
+                    Como posso agendar uma consulta?
                   </div>
                   <div className="accordion-section-content" id="accordion-a4">
-                    Atendemos de segunda a sexta-feira, das 9h às 19h.
+                    Você pode agendar pelo <Link href="/agendamento" className="id-color fw-bold">formulário do site</Link> ou falar diretamente com nossa equipe pelo WhatsApp no número (41) 99849-7676.
                   </div>
                   <div className="accordion-section-title" data-tab="#accordion-a5">
-                    Clareamento dental é seguro?
+                    Onde fica a Orto Up e qual é o horário de atendimento?
                   </div>
                   <div className="accordion-section-content" id="accordion-a5">
-                    Sim. Realizamos um clareamento personalizado para cada paciente, com acompanhamento profissional durante todo o processo.
+                    Estamos na Rua Almirante Alexandrino, 2300, no bairro Afonso Pena, em São José dos Pinhais. Atendemos de segunda a sexta-feira, das 9h às 19h.
                   </div>
                 </div>
               </div>
