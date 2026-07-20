@@ -61,7 +61,10 @@ export default function Header({
               <div className="de-flex-col">
                 <div className="menu_side_area">
                   <Link href="/agendamento" className="btn-main fx-slide"><span>Agendar Consulta</span></Link>
-                  <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false"></button>
+                  <button id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                  </button>
                 </div>
 
                 <div id="btn-extra">
