@@ -5,6 +5,5 @@ export type Convenio = {
 
 export const convenios: Convenio[] = [
   { name: 'Amil Dental', logo: '/images/convenios/amil-dental.png' },
-  { name: 'Dentaluni', logo: '/images/convenios/dentaluni.png' },
-  { name: 'SulAmérica', logo: '/images/convenios/sulamerica.png' },
+  { name: 'Saúde Caixa', logo: '/images/convenios/saude-caixa.png' },
 ];
