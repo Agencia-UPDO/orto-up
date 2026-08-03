@@ -4,7 +4,7 @@ import PartnersCarousel from '@/components/PartnersCarousel';
 
 export const metadata: Metadata = {
   title: 'Sobre Nós',
-  description: 'Conheça a história da Orto Up, fundada em 2009 pelo Dr. Marcelo Silva Araujo em Afonso Pena, São José dos Pinhais - PR. Missão, visão, valores e nossa equipe.',
+  description: 'Conheça a história da Orto Up, fundada em 2009 pelo Dr. Marcelo Silva Araujo no Afonso Pena, São José dos Pinhais - PR. Missão, visão, valores e nossa equipe.',
   alternates: { canonical: '/sobre' },
 };
 
@@ -63,7 +63,7 @@ export default function About() {
                   Fundada em 2009 pelo Dr. Marcelo Silva Araujo, a Orto Up nasceu do sonho de oferecer uma odontologia diferenciada, baseada em excelência técnica e atendimento humanizado. Para o Dr. Marcelo, a saúde bucal sempre foi muito mais do que procedimentos: significa transformar sorrisos, devolver autoestima e proporcionar qualidade de vida aos pacientes.
                 </p>
                 <p className="wow fadeInUp" data-wow-delay=".5s">
-                  Ao longo dos anos, construímos um espaço acolhedor e moderno em Afonso Pena, São José dos Pinhais, comprometido com tratamentos de alta qualidade. Entre os principais marcos da nossa trajetória estão a expansão do número de atendimentos, a modernização da estrutura e a implementação de novas tecnologias — consolidando a Orto Up como referência em atendimento humanizado e excelência profissional na região.
+                  Ao longo dos anos, construímos um espaço acolhedor e moderno no Afonso Pena, São José dos Pinhais, comprometido com tratamentos de alta qualidade. Entre os principais marcos da nossa trajetória estão a expansão do número de atendimentos, a modernização da estrutura e a implementação de novas tecnologias — consolidando a Orto Up como referência em atendimento humanizado e excelência profissional na região.
                 </p>
 
                 <Link className="btn-main fx-slide wow fadeInUp" data-wow-delay=".8s" href="/agendamento"><span>Agendar Consulta</span></Link>
