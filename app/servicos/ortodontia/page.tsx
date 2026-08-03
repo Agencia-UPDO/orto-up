@@ -14,7 +14,7 @@ export default function Ortodontia() {
       icon="/images/icons/icon-ortodontia.png"
       image="/images/services/ortodontia-01.jpg"
       image2="/images/services/ortodontia-02.jpg"
-      intro="Trabalhamos com vários tipos de aparelho ortodôntico, entre eles o autoligado — que não utiliza as borrachinhas tradicionais e ajuda a acelerar o tempo de tratamento."
+      intro="O aparelho fixo autoligado utiliza um sistema moderno que dispensa as tradicionais “borrachinhas”, permitindo um deslizamento mais eficiente dos fios ortodônticos. Isso proporciona mais conforto, menos atrito, mais facilidade na higienização e, em muitos casos, um tratamento mais rápido e confortável para o paciente."
       highlights={[
         'Aparelho autoligado, sem borrachinhas, com menos atrito e mais conforto',
         'Alinhamento dos dentes e correção da mordida',

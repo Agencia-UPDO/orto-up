@@ -14,7 +14,7 @@ export default function ImplantesDentarios() {
       icon="/images/icons/icon-implantes.png"
       image="/images/services/implante-dentario-01.jpg"
       image2="/images/services/implante-dentario-02.jpg"
-      intro="Contamos com a tecnologia de implante sem corte: por meio de um guia cirúrgico personalizado, realizamos a cirurgia guiada com mais precisão, previsibilidade e conforto para o paciente."
+      intro="A cirurgia odontológica sem corte, conhecida como cirurgia guiada por computador, utiliza tomografia 3D, planejamento digital e guias impressos em 3D para realizar procedimentos como implantes de forma minimamente invasiva."
       highlights={[
         'Cirurgia guiada por planejamento digital, sem necessidade de corte',
         'Substituição de um ou mais dentes ausentes com uma base fixa e estável',

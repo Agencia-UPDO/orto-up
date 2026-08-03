@@ -107,7 +107,6 @@ export default function Home() {
                 <p className="wow fadeInUp" data-wow-delay=".4s">Fundada pelo Dr. Marcelo Silva Araujo, a Orto Up nasceu do sonho de oferecer uma odontologia diferenciada, baseada em excelência técnica e atendimento humanizado, transformando sorrisos e devolvendo autoestima aos pacientes.</p>
                 <ul className="ul-check text-dark cols-2 fw-600 mb-4 wow fadeInUp" data-wow-delay=".6s">
                   <li>Atendimento Humanizado</li>
-                  <li>Aceitamos Planos de Saúde</li>
                   <li>Tecnologia Atualizada</li>
                   <li>Ambiente Moderno</li>
                 </ul>
