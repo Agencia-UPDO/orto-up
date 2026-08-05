@@ -1,57 +1,49 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 export default function ContactForm() {
-  const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
+    setErrorMessage('');
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
 
-    // REPLACE THESE VALUES WITH YOUR EMAILJS CREDENTIALS
-    // 1. Go to https://www.emailjs.com/
-    // 2. Create a free account
-    // 3. Add an "Email Service" (e.g., Gmail) -> get SERVICE_ID
-    // 4. Create an "Email Template" -> get TEMPLATE_ID
-    // 5. Go to Account > API Keys -> get PUBLIC_KEY
-    
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    try {
+      const response = await fetch('/api/forms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'contact',
+          ...Object.fromEntries(formData.entries()),
+        }),
+      });
 
-    if (SERVICE_ID === 'YOUR_SERVICE_ID') {
-        // Fallback for demo purposes if keys aren't set
-        setTimeout(() => {
-            const formData = new FormData(form.current!);
-            const mailtoLink = `mailto:ortoup@ortoup.com.br?subject=Novo Contato de ${formData.get('name')}&body=${formData.get('message')}%0D%0A%0D%0ADe: ${formData.get('name')} (${formData.get('email')}, ${formData.get('phone')})`;
-            window.location.href = mailtoLink;
-            setStatus('success');
-        }, 1000);
-        return;
-    }
+      const result = await response.json().catch(() => null);
+      if (!response.ok) {
+        throw new Error(result?.message || 'Falha ao enviar a mensagem.');
+      }
 
-    if (form.current) {
-      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-        .then((result) => {
-            console.log(result.text);
-            setStatus('success');
-            if (form.current) form.current.reset();
-        }, (error) => {
-            console.log(error.text);
-            setStatus('error');
-            setErrorMessage('Falha ao enviar a mensagem. Tente novamente mais tarde ou fale conosco diretamente.');
-        });
+      setStatus('success');
+      formElement.reset();
+    } catch (error) {
+      setStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Falha ao enviar a mensagem. Tente novamente mais tarde ou fale conosco diretamente.');
     }
   };
 
   return (
     <div className="p-40 bg-color-op-1 rounded-1">
       <h3>Fale Conosco</h3>
-      <form ref={form} onSubmit={sendEmail} name="contactForm" id="contact_form" className="form-border">
+      <form onSubmit={sendEmail} name="contactForm" id="contact_form" className="form-border">
+        <div className="visually-hidden" aria-hidden="true">
+          <label htmlFor="contact-website">Não preencha este campo</label>
+          <input id="contact-website" type="text" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
         <div className="mb-4">
           <input type="text" name="name" id="name" className="form-control" placeholder="Seu Nome" required />
         </div>

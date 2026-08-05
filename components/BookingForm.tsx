@@ -1,15 +1,10 @@
 'use client';
 
-import emailjs from '@emailjs/browser';
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error';
-const BOOKING_EMAILJS_SERVICE_ID = '';
-const BOOKING_EMAILJS_TEMPLATE_ID = '';
-const BOOKING_EMAILJS_PUBLIC_KEY = '';
 
 export default function BookingForm() {
-  const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<SubmitStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const today = useMemo(() => new Date().toISOString().split('T')[0], []);
@@ -18,32 +13,29 @@ export default function BookingForm() {
     e.preventDefault();
     setStatus('sending');
     setErrorMessage('');
-
-    const serviceId = BOOKING_EMAILJS_SERVICE_ID.trim();
-    const templateId = BOOKING_EMAILJS_TEMPLATE_ID.trim();
-    const publicKey = BOOKING_EMAILJS_PUBLIC_KEY.trim();
-
-    if (!formRef.current) {
-      setStatus('error');
-      setErrorMessage('Formulário indisponível. Tente atualizar a página.');
-      return;
-    }
-
-    if (!serviceId || !templateId || !publicKey) {
-      const formData = new FormData(formRef.current);
-      const mailto = `mailto:ortoup@ortoup.com.br?subject=Agendamento de Consulta - ${formData.get('service')}&body=Nome: ${formData.get('name')}%0D%0AE-mail: ${formData.get('email')}%0D%0ATelefone: ${formData.get('phone')}%0D%0AServiço: ${formData.get('service')}%0D%0AData: ${formData.get('date')}%0D%0AHorário: ${formData.get('time')}%0D%0AMensagem: ${formData.get('message')}`;
-      window.location.href = mailto;
-      setStatus('success');
-      return;
-    }
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
 
     try {
-      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
+      const response = await fetch('/api/forms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'booking',
+          ...Object.fromEntries(formData.entries()),
+        }),
+      });
+
+      const result = await response.json().catch(() => null);
+      if (!response.ok) {
+        throw new Error(result?.message || 'Falha ao enviar o agendamento.');
+      }
+
       setStatus('success');
-      formRef.current.reset();
-    } catch {
+      formElement.reset();
+    } catch (error) {
       setStatus('error');
-      setErrorMessage('Falha ao enviar o agendamento. Tente novamente ou fale conosco diretamente.');
+      setErrorMessage(error instanceof Error ? error.message : 'Falha ao enviar o agendamento. Tente novamente ou fale conosco diretamente.');
     }
   };
 
@@ -62,7 +54,11 @@ export default function BookingForm() {
           </button>
         </div>
       ) : (
-        <form ref={formRef} name="bookingForm" id="booking_form" onSubmit={handleSubmit}>
+        <form name="bookingForm" id="booking_form" onSubmit={handleSubmit}>
+          <div className="visually-hidden" aria-hidden="true">
+            <label htmlFor="booking-website">Não preencha este campo</label>
+            <input id="booking-website" type="text" name="website" tabIndex={-1} autoComplete="off" />
+          </div>
           <div className="row g-4">
             <div className="col-lg-12">
               <h3 className="mb-3"><i className="fa fa-envelope-o id-color me-2"></i> Agende sua Consulta</h3>
@@ -106,7 +102,6 @@ export default function BookingForm() {
                   <option value="17:00">17:00</option>
                   <option value="18:00">18:00</option>
                   <option value="19:00">19:00</option>
-                  <option value="20:00">20:00</option>
                 </select>
                 <i className="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
               </div>
