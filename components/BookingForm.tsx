@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { trackLead } from '@/lib/analytics';
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error';
 
@@ -31,6 +32,7 @@ export default function BookingForm() {
         throw new Error(result?.message || 'Falha ao enviar o agendamento.');
       }
 
+      trackLead('agendamento');
       setStatus('success');
       formElement.reset();
     } catch (error) {

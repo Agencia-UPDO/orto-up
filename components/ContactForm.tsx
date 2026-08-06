@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackLead } from '@/lib/analytics';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -28,6 +29,7 @@ export default function ContactForm() {
         throw new Error(result?.message || 'Falha ao enviar a mensagem.');
       }
 
+      trackLead('contato');
       setStatus('success');
       formElement.reset();
     } catch (error) {

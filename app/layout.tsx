@@ -9,6 +9,7 @@ import ScriptHandler from "@/components/ScriptHandler";
 
 const siteUrl = "https://www.ortoup.com.br";
 const siteName = "Orto Up Clínica Odontológica";
+const googleTagManagerId = "GTM-KVHZPBL3";
 const defaultDescription =
   "Clínica odontológica em Afonso Pena, São José dos Pinhais - PR. Implantes, ortodontia, alinhadores invisíveis e mais, com atendimento humanizado desde 2009. Aceitamos planos de saúde.";
 
@@ -150,8 +151,24 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${googleTagManagerId}');`}
+        </Script>
       </head>
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <ScriptHandler />
         <div id="wrapper">
           <a href="#" id="back-to-top"></a>
