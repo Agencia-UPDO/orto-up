@@ -28,6 +28,8 @@ export default function Footer() {
                     <li><Link href="/servicos">Nossos Serviços</Link></li>
                     <li><Link href="/contato">Contato</Link></li>
                     <li><Link href="/agendamento">Agendar Consulta</Link></li>
+                    <li><Link href="/termos-e-condicoes">Termos &amp; Condições</Link></li>
+                    <li><Link href="/politica-de-privacidade">Política de Privacidade</Link></li>
                   </ul>
                 </div>
               </div>
@@ -81,10 +83,17 @@ export default function Footer() {
                 <div className="de-flex-col">
                   Copyright {new Date().getFullYear()} - Orto Up Clínica Odontológica &middot; CNPJ 11.213.984/0001-05 &middot; CRO Clínica 1856
                 </div>
-                <ul className="menu-simple">
-                  <li><Link href="/termos-e-condicoes">Termos &amp; Condições</Link></li>
-                  <li><Link href="/politica-de-privacidade">Política de Privacidade</Link></li>
-                </ul>
+                <div className="de-flex-col footer-developer">
+                  <span>Desenvolvido por</span>
+                  <a
+                    href="https://updo.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Site desenvolvido pela UPDO"
+                  >
+                    <img src="/images/logo/Logo UPDO 2024 Branca.svg" alt="UPDO" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

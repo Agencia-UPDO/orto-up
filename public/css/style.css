@@ -1330,6 +1330,41 @@ footer a {
   padding: 20px 0 20px 0;
 }
 
+.footer-developer {
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.footer-developer span {
+  font-size: 12px;
+  opacity: .75;
+}
+
+.footer-developer a {
+  display: inline-flex;
+  align-items: center;
+  opacity: .85;
+  transition: opacity .2s ease;
+}
+
+.footer-developer a:hover {
+  opacity: 1;
+}
+
+.footer-developer img {
+  display: block;
+  width: 100px;
+  height: 36px;
+}
+
+@media (max-width: 767px) {
+  .footer-developer {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin: 14px 0;
+  }
+}
+
 .footer-light .subfooter {
   border-top: solid 1px rgba(0, 0, 0, .1);
 }
