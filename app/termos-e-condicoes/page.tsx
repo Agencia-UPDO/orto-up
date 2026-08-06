@@ -96,7 +96,7 @@ export default function TermsPage() {
 
       <section id="contato" className="legal-section">
         <h2>11. Contato</h2>
-        <p>Dúvidas sobre estes termos podem ser enviadas para <a className="id-color fw-bold" href="mailto:ortoup@ortoup.com.br">ortoup@ortoup.com.br</a>, pelo telefone/WhatsApp <a className="id-color fw-bold" href="https://wa.me/5541998497676">(41) 99849-7676</a> ou por nossa <Link className="id-color fw-bold" href="/contato">página de contato</Link>.</p>
+        <p>Dúvidas sobre estes termos podem ser enviadas para <a className="id-color fw-bold" href="mailto:recepcao@ortoup.com.br">recepcao@ortoup.com.br</a>, pelo telefone/WhatsApp <a className="id-color fw-bold" href="https://wa.me/5541998497676">(41) 99849-7676</a> ou por nossa <Link className="id-color fw-bold" href="/contato">página de contato</Link>.</p>
       </section>
     </LegalPage>
   );

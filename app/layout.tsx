@@ -87,7 +87,7 @@ const jsonLd = {
   description: defaultDescription,
   url: siteUrl,
   telephone: "+5541998497676",
-  email: "ortoup@ortoup.com.br",
+  email: "recepcao@ortoup.com.br",
   image: `${siteUrl}/images/fotos-clinica/sala-espera-orto-up-01.webp`,
   logo: `${siteUrl}/images/logo-orto-up-color.png`,
   priceRange: "$$",
@@ -229,7 +229,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <h5>Fale Conosco</h5>
                 <div><i className="icofont-clock-time me-2 op-5"></i>Segunda a Sexta, 09h às 19h</div>
                 <div><i className="icofont-location-pin me-2 op-5"></i>Rua Almirante Alexandrino, 2300 - Afonso Pena, São José dos Pinhais - PR</div>
-                <div><i className="icofont-envelope me-2 op-5"></i>ortoup@ortoup.com.br</div>
+                <div><i className="icofont-envelope me-2 op-5"></i>recepcao@ortoup.com.br</div>
 
                 <div className="spacer-30-line"></div>
 

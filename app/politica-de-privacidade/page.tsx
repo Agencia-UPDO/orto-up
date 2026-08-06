@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
       <section id="controlador" className="legal-section">
         <h2>1. Quem trata seus dados</h2>
         <p>A controladora dos dados é a Orto Up Clínica Odontológica, CNPJ nº 11.213.984/0001-05, CRO Clínica nº 1856, com endereço na Rua Almirante Alexandrino, 2300, Afonso Pena, São José dos Pinhais/PR, CEP 83045-210.</p>
-        <p>Para assuntos relacionados à privacidade e à proteção de dados, utilize o e-mail <a className="id-color fw-bold" href="mailto:ortoup@ortoup.com.br">ortoup@ortoup.com.br</a>.</p>
+        <p>Para assuntos relacionados à privacidade e à proteção de dados, utilize o e-mail <a className="id-color fw-bold" href="mailto:recepcao@ortoup.com.br">recepcao@ortoup.com.br</a>.</p>
       </section>
 
       <section id="dados" className="legal-section">
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
 
       <section id="contato" className="legal-section">
         <h2>12. Contato sobre privacidade</h2>
-        <p>Para exercer direitos ou esclarecer dúvidas, escreva para <a className="id-color fw-bold" href="mailto:ortoup@ortoup.com.br">ortoup@ortoup.com.br</a>, ligue ou envie mensagem para <a className="id-color fw-bold" href="https://wa.me/5541998497676">(41) 99849-7676</a>, ou acesse nossa <Link className="id-color fw-bold" href="/contato">página de contato</Link>.</p>
+        <p>Para exercer direitos ou esclarecer dúvidas, escreva para <a className="id-color fw-bold" href="mailto:recepcao@ortoup.com.br">recepcao@ortoup.com.br</a>, ligue ou envie mensagem para <a className="id-color fw-bold" href="https://wa.me/5541998497676">(41) 99849-7676</a>, ou acesse nossa <Link className="id-color fw-bold" href="/contato">página de contato</Link>.</p>
       </section>
     </LegalPage>
   );

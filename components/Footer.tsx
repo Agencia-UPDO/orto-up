@@ -65,7 +65,7 @@ export default function Footer() {
               <div className="spacer-20"></div>
 
               <div className="fw-bold text-white"><i className="icofont-envelope me-2 id-color"></i>Envie uma Mensagem</div>
-              ortoup@ortoup.com.br
+              recepcao@ortoup.com.br
 
               <div className="spacer-20"></div>
 
