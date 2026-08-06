@@ -22,7 +22,7 @@ export default function Home() {
               <div className="subtitle s2 mb-3 wow fadeInUp" data-wow-delay=".0s">Bem-vindo à Orto Up</div>
               <h1 className="fs-84 fs-sm-10vw lh-1-1 wow fadeInUp" data-wow-delay=".2s">Consultório <span className="id-color">Odontológico</span> em São José dos Pinhais</h1>
               <div className="pe-lg-5 wow fadeInUp" data-wow-delay=".4s">
-                <p className="mb-4 pe-lg-5">Desde 2009 no Afonso Pena, São José dos Pinhais, unimos excelência técnica e atendimento humanizado para transformar sorrisos. Atendemos com planos de saúde.</p>
+                <p className="mb-4 pe-lg-5">Desde 2009 no Afonso Pena, São José dos Pinhais, unimos excelência técnica e atendimento humanizado para transformar sorrisos.</p>
               </div>
 
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3 gap-md-0 pb-4 mb-4 c wow fadeInUp" data-wow-delay=".9s">

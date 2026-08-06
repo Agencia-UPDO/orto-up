@@ -30,7 +30,7 @@ export default function Services() {
         <div className="container">
           <div className="row g-4 justify-content-center mb-4">
             <div className="col-lg-8 text-center">
-              <p className="wow fadeInUp">Atendemos com planos de saúde e oferecemos um cuidado odontológico completo, do check-up de rotina a tratamentos especializados, sempre com atendimento humanizado.</p>
+              <p className="wow fadeInUp">Oferecemos um cuidado odontológico completo, do check-up de rotina a tratamentos especializados, com excelência técnica e atendimento humanizado em cada etapa.</p>
             </div>
           </div>
 
